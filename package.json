@@ -1,5 +1,5 @@
 {
-  "name": "redux-storage-engine-localStorage",
+  "name": "redux-storage-engine-localstorage",
   "version": "1.0.0",
   "description": "window.localStorage engine for redux-storage",
   "main": "build/index.js",
@@ -9,9 +9,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/michaelcontento/redux-storage-engine-localStorage.git"
+    "url": "https://github.com/michaelcontento/redux-storage-engine-localstorage.git"
   },
-  "homepage": "https://github.com/michaelcontento/redux-storage-engine-localStorage",
+  "homepage": "https://github.com/michaelcontento/redux-storage-engine-localstorage",
   "keywords": [
     "redux",
     "redux-storage",

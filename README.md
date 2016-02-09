@@ -1,26 +1,26 @@
-# [redux-storage-engine-localStorage][]
+# [redux-storage-engine-localstorage][]
 
-[![build](https://travis-ci.org/michaelcontento/redux-storage-engine-localStorage.svg)](https://travis-ci.org/michaelcontento/redux-storage-engine-localStorage)
-[![dependencies](https://david-dm.org/michaelcontento/redux-storage-engine-localStorage.svg)](https://david-dm.org/michaelcontento/redux-storage-engine-localStorage)
-[![devDependencies](https://david-dm.org/michaelcontento/redux-storage-engine-localStorage/dev-status.svg)](https://david-dm.org/michaelcontento/redux-storage-engine-localStorage#info=devDependencies)
+[![build](https://travis-ci.org/michaelcontento/redux-storage-engine-localstorage.svg)](https://travis-ci.org/michaelcontento/redux-storage-engine-localstorage)
+[![dependencies](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage.svg)](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage)
+[![devDependencies](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage/dev-status.svg)](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage#info=devDependencies)
 
-[![license](https://img.shields.io/npm/l/redux-storage-engine-localStorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localStorage)
-[![npm version](https://img.shields.io/npm/v/redux-storage-engine-localStorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localStorage)
-[![npm downloads](https://img.shields.io/npm/dm/redux-storage-engine-localStorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localStorage)
-[![Code Climate](https://codeclimate.com/github/michaelcontento/redux-storage-engine-localStorage/badges/gpa.svg)](https://codeclimate.com/github/michaelcontento/redux-storage-engine-localStorage)
+[![license](https://img.shields.io/npm/l/redux-storage-engine-localstorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localstorage)
+[![npm version](https://img.shields.io/npm/v/redux-storage-engine-localstorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localstorage)
+[![npm downloads](https://img.shields.io/npm/dm/redux-storage-engine-localstorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localstorage)
+[![Code Climate](https://codeclimate.com/github/michaelcontento/redux-storage-engine-localstorage/badges/gpa.svg)](https://codeclimate.com/github/michaelcontento/redux-storage-engine-localstorage)
 
 `window.localStorage` based engine for [redux-storage][].
 
 ## Installation
 
-    npm install --save redux-storage-engine-localStorage
+    npm install --save redux-storage-engine-localstorage
 
 ## Usage
 
 Stores everything inside `window.localStorage`.
 
 ```js
-import createEngine from 'redux-storage-engine-localStorage';
+import createEngine from 'redux-storage-engine-localstorage';
 const engine = createEngine('my-save-key');
 ```
 
@@ -28,7 +28,7 @@ const engine = createEngine('my-save-key');
 operation will block the JS thread!
 
 **Warning**: Some browsers like IE<=11 does not support Promises! If you don't
-want to polyfill the whole Promise API, [redux-storage-engine-localStorageFakePromise][]
+want to polyfill the whole Promise API, [redux-storage-engine-localstoragefakepromise][]
 might be a possible solution for you.
 
 ## License
@@ -55,5 +55,5 @@ might be a possible solution for you.
     CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
   [redux-storage]: https://github.com/michaelcontento/redux-storage
-  [redux-storage-engine-localStorage]: https://github.com/michaelcontento/redux-storage-engine-localStorage
-  [redux-storage-engine-localStorageFakePromise]: https://github.com/michaelcontento/redux-storage-engine-localStorageFakePromise
+  [redux-storage-engine-localstorage]: https://github.com/michaelcontento/redux-storage-engine-localstorage
+  [redux-storage-engine-localstoragefakepromise]: https://github.com/michaelcontento/redux-storage-engine-localstoragefakepromise
