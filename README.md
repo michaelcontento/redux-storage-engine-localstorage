@@ -1,6 +1,6 @@
 # [redux-storage-engine-localstorage][]
 
-[![build](https://travis-ci.org/michaelcontento/redux-storage-engine-localstorage.svg)](https://travis-ci.org/michaelcontento/redux-storage-engine-localstorage)
+[![build](https://travis-ci.org/michaelcontento/redux-storage-engine-localstorage.svg?branch=master)](https://travis-ci.org/michaelcontento/redux-storage-engine-localstorage)
 [![dependencies](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage.svg)](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage)
 [![devDependencies](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage/dev-status.svg)](https://david-dm.org/michaelcontento/redux-storage-engine-localstorage#info=devDependencies)
 
