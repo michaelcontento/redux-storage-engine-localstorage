@@ -1,12 +1,25 @@
 export default (key) => ({
     load() {
-        const jsonState = localStorage.getItem(key);
+        let jsonState;
+
+        try {
+            jsonState = localStorage.getItem(key);
+        } catch (err) {
+            return Promise.reject(err.message);
+        }
+
         return Promise.resolve(JSON.parse(jsonState) || {});
     },
 
     save(state) {
         const jsonState = JSON.stringify(state);
-        localStorage.setItem(key, jsonState);
+
+        try {
+            localStorage.setItem(key, jsonState);
+        } catch (err) {
+            return Promise.reject(err.message);
+        }
+
         return Promise.resolve();
     }
 });
