@@ -7,7 +7,6 @@
 [![license](https://img.shields.io/npm/l/redux-storage-engine-localstorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localstorage)
 [![npm version](https://img.shields.io/npm/v/redux-storage-engine-localstorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localstorage)
 [![npm downloads](https://img.shields.io/npm/dm/redux-storage-engine-localstorage.svg?style=flat-square)](https://www.npmjs.com/package/redux-storage-engine-localstorage)
-[![Code Climate](https://codeclimate.com/github/michaelcontento/redux-storage-engine-localstorage/badges/gpa.svg)](https://codeclimate.com/github/michaelcontento/redux-storage-engine-localstorage)
 
 `window.localStorage` based engine for [redux-storage][].
 
