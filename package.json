@@ -1,6 +1,6 @@
 {
   "name": "redux-storage-engine-localstorage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "window.localStorage engine for redux-storage",
   "main": "build/index.js",
   "jsnext:main": "src/index.js",
