@@ -1,25 +1,18 @@
+const rejectWithMessage = error => Promise.reject(error.message);
+
 export default (key) => ({
     load() {
-        let jsonState;
-
-        try {
-            jsonState = localStorage.getItem(key);
-        } catch (err) {
-            return Promise.reject(err.message);
-        }
-
-        return Promise.resolve(JSON.parse(jsonState) || {});
+        return new Promise(resolve => {
+            const jsonState = localStorage.getItem(key);
+            resolve(JSON.parse(jsonState) || {});
+        }).catch(rejectWithMessage);
     },
 
     save(state) {
-        const jsonState = JSON.stringify(state);
-
-        try {
+        return new Promise(resolve => {
+            const jsonState = JSON.stringify(state);
             localStorage.setItem(key, jsonState);
-        } catch (err) {
-            return Promise.reject(err.message);
-        }
-
-        return Promise.resolve();
+            resolve();
+        }).catch(rejectWithMessage);
     }
 });
