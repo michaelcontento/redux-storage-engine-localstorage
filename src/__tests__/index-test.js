@@ -46,6 +46,14 @@ describe('engine', () => {
             return engine.load()
                 .should.eventually.be.rejectedWith('localStorage is not defined');
         });
+
+        it('should reject if json cannot be loaded', async () => {
+            localStorage.getItem.returns('{"a');
+            const engine = createEngine('key');
+
+            return engine.load()
+                .should.eventually.be.rejectedWith('Unexpected token a');
+        });
     });
 
     describe('save', () => {
@@ -79,6 +87,15 @@ describe('engine', () => {
             const engine = createEngine('key');
             return engine.save({})
                 .should.eventually.be.rejectedWith('localStorage is not defined');
+        });
+
+        it('should reject if json cannot be serialized', async () => {
+            const engine = createEngine('key');
+            const a = {};
+            a.a = a;
+
+            return engine.save(a)
+                .should.eventually.be.rejectedWith('Converting circular structure to JSON');
         });
     });
 });
