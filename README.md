@@ -23,19 +23,19 @@ import createEngine from 'redux-storage-engine-localstorage';
 const engine = createEngine('my-save-key');
 ```
 
-You can customize saving process by providing [`replacer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter) and [`reviver`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter).
+You can customize the saving and loading process by providing a [`replacer`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify#The_replacer_parameter) and/or a [`reviver`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse#Using_the_reviver_parameter).
 
 ```js
 import createEngine from 'redux-storage-engine-localstorage';
 
-function replacer(key, value) {
+function replacer (key, value) {
   if (typeof value === 'string') {
     return 'foo';
   }
   return value;
 }
 
-function reviver(key, value) {
+function reviver (key, value) {
   if (key === 'foo') {
     return 'bar';
   }
