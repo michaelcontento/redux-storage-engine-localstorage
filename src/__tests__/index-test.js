@@ -54,6 +54,15 @@ describe('engine', () => {
             return engine.load()
                 .should.eventually.be.rejectedWith('Unexpected token a');
         });
+
+        it('should use a provided reviver', async () => {
+            const reviver = sinon.stub();
+            const engine = createEngine('key', null, reviver);
+
+            await engine.load();
+
+            reviver.should.have.been.called;
+        });
     });
 
     describe('save', () => {
@@ -96,6 +105,15 @@ describe('engine', () => {
 
             return engine.save(a)
                 .should.eventually.be.rejectedWith('Converting circular structure to JSON');
+        });
+
+        it('should use a provided replacer', async () => {
+            const replacer = sinon.stub();
+            const engine = createEngine('key', replacer);
+
+            await engine.save({});
+
+            replacer.should.have.been.called;
         });
     });
 });
